@@ -1,6 +1,5 @@
 package com.it.mail;
 
-import com.it.users.User;
 import com.it.utils.QAUtils;
 
 import java.util.List;
@@ -8,18 +7,18 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class MailFactory {
+public class EmailFactory {
     private static ResourceBundle mail = ResourceBundle.getBundle("user");
 
-    public static Mail getValidMail(){
-        return new Mail(mail.getString("whomEmail"),
+    public static Email getValidMail(){
+        return new Email(mail.getString("whomEmail"),
                 mail.getString("Subject"),
                 mail.getString("emailBody"));
     }
 
-    public static List<Mail> getRandomMails(int count) {
+    public static List<Email> getRandomMails(int count) {
         return Stream.generate(
-                () -> new Mail(
+                () -> new Email(
                         QAUtils.getRandomString(10)+"@i.ua",
                         QAUtils.getRandomString(10),
                         QAUtils.getRandomString(20)

@@ -1,8 +1,8 @@
 package com.it.tests;
 
 import com.it.App;
-import com.it.mail.Mail;
-import com.it.mail.MailFactory;
+import com.it.mail.Email;
+import com.it.mail.EmailFactory;
 import com.it.users.User;
 import com.it.users.UserFactory;
 import org.testng.annotations.*;
@@ -10,7 +10,7 @@ import org.testng.annotations.*;
 public class BaseTest {
     protected App app = new App();
     protected User validUser = UserFactory.getValidUser();
-    protected Mail validMail = MailFactory.getValidMail();
+    protected Email validEmail = EmailFactory.getValidMail();
 
     @BeforeSuite
     public void beforeSuite() {

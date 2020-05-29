@@ -1,11 +1,11 @@
 package com.it.mail;
 
-public class Mail {
+public class Email {
     public String whomEmail;
     public String Subject;
     public String emailBody;
 
-    public Mail(String whomEmail, String subject, String emailBody) {
+    public Email(String whomEmail, String subject, String emailBody) {
         this.whomEmail = whomEmail;
         this.Subject = subject;
         this.emailBody = emailBody;
@@ -16,11 +16,11 @@ public class Mail {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Mail mail = (Mail) o;
+        Email email = (Email) o;
 
-        if (whomEmail != null ? !whomEmail.equals(mail.whomEmail) : mail.whomEmail != null) return false;
-        if (Subject != null ? !Subject.equals(mail.Subject) : mail.Subject != null) return false;
-        return emailBody != null ? emailBody.equals(mail.emailBody) : mail.emailBody == null;
+        if (whomEmail != null ? !whomEmail.equals(email.whomEmail) : email.whomEmail != null) return false;
+        if (Subject != null ? !Subject.equals(email.Subject) : email.Subject != null) return false;
+        return emailBody != null ? emailBody.equals(email.emailBody) : email.emailBody == null;
     }
 
     @Override
