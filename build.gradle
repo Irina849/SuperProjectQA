@@ -7,6 +7,7 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+
 repositories {
     mavenCentral()
 }
@@ -19,7 +20,9 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '4.0.0-alpha-2'
 
 }
-
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 //tasks.register("chrome", Test.class).configure {
 //    systemProperty("driver", "chrome")
 //    useTestNG {
@@ -27,16 +30,17 @@ dependencies {
 //    }
 //}
 
-task chrome(type: Test){
+task chrome(type: Test) {
     systemProperty("driver", "chrome")
     useTestNG {
         suites 'src\\test\\resources\\testNG.xml'
     }
 }
 
-task fireFox(type: Test){
+task fireFox(type: Test) {
     systemProperty("driver", "fireFox")
     useTestNG {
         suites 'src\\test\\resources\\testNG.xml'
     }
 }
+

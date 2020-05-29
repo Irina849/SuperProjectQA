@@ -6,5 +6,4 @@
             <class name="com.it.tests.MyTest" />
         </classes>
     </test>
-
 </suite>
