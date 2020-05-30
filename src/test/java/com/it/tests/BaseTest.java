@@ -17,6 +17,7 @@ public class BaseTest {
 
     }
 
+
     @AfterSuite
     public void afterSuite() {
         app.common.appStop();
