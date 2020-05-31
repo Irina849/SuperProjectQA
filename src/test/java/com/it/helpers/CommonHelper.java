@@ -8,4 +8,8 @@ public class CommonHelper extends BasePage {
         driver.quit();
     }
 
+    public void takeScreenShot() {
+        driver.takeSnapShip();
+    }
+
 }

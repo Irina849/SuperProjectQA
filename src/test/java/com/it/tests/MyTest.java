@@ -8,6 +8,7 @@ public class MyTest extends BaseTest {
     public void test1() {
         // System.out.println(UserFactory.getRandomUsers(10));
         app.login.login(validUser);
+        app.common.takeScreenShot();
         Assert.assertEquals(app.dashboard.getLBUserEmail(), validUser.email);
     }
 
